@@ -1,23 +1,27 @@
-import React, { Component } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import AppRoutes from './AppRoutes';
-import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
-import { Layout } from './components/Layout';
+import React, { Component, useEffect, useState } from 'react';
 import './custom.css';
+import List from './components/List';
+import { getUsers } from './functions/UserFunctions';
 
-export default class App extends Component {
-  static displayName = App.name;
+const App = () => {
+  const [users, setUsers] = useState([])
 
-  render() {
-    return (
-      <Layout>
-        <Routes>
-          {AppRoutes.map((route, index) => {
-            const { element, requireAuth, ...rest } = route;
-            return <Route key={index} {...rest} element={requireAuth ? <AuthorizeRoute {...rest} element={element} /> : element} />;
-          })}
-        </Routes>
-      </Layout>
-    );
-  }
+  useEffect(() => {
+    const getData = async () => {
+      const res = await getUsers()
+      setUsers(res)
+    }
+
+    getData()
+  }, [])
+
+  return (
+    <div className="App">
+      <h1>Users</h1>
+      <List listUsers={users} />
+      <Form />
+    </div>
+  );
 }
+
+export default App

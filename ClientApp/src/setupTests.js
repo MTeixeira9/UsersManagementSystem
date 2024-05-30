@@ -12,10 +12,10 @@ window.fetch = () => {
     {
       ok: true,
       json: () => Promise.resolve({
-        "authority": "https://localhost:7236",
+        "authority": "http://localhost:7236",
         "client_id": "ChallengeVisionBox",
-        "redirect_uri": "https://localhost:7236/authentication/login-callback",
-        "post_logout_redirect_uri": "https://localhost:7236/authentication/logout-callback",
+        "redirect_uri": "http://localhost:7236/authentication/login-callback",
+        "post_logout_redirect_uri": "http://localhost:7236/authentication/logout-callback",
         "response_type": "id_token token",
         "scope": "ChallengeVisionBoxAPI openid profile"
      })

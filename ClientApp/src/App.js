@@ -19,8 +19,8 @@ const App = () => {
   return (
     <div className="App">
       <h1>Users</h1>
-      <List listUsers={users} />
-      <Form updateListUsers={setUsers}/>
+      <List listUsers={users} updateListUsers={setUsers} />
+      <Form updateListUsers={setUsers} />
     </div>
   );
 }

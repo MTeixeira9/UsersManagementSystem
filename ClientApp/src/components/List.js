@@ -1,9 +1,14 @@
 import React from "react";
 import User from "./User";
+import { deleteUser, getUsers } from "../functions/UserFunctions";
 
-const List = ({ listUsers }) => {
+const List = ({ listUsers, updateListUsers }) => {
 
-    console.log("listUsers", listUsers)
+    const handleDeleteUser = async (id) => {
+        await deleteUser(id)
+        const users = await getUsers()
+        updateListUsers(users)
+    }
 
     const render = () => {
         if (listUsers.length === 0) {
@@ -11,7 +16,7 @@ const List = ({ listUsers }) => {
         }
 
         return listUsers.map(({ fullName, email, job, id }) => {
-            return <User key={id} fullName={fullName} email={email} job={job} />
+            return <User key={id} id={id} fullName={fullName} email={email} job={job} handleDeleteUser={handleDeleteUser} />
         })
     }
 

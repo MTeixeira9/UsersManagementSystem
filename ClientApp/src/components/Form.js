@@ -1,14 +1,30 @@
 import React, { useState } from "react";
-import './User.css';
 import { addUser, getUsers } from "../functions/UserFunctions";
+import './Form.css';
 
 const Form = ({ updateListUsers }) => {
     const [fullName, setFullName] = useState("")
     const [email, setEmail] = useState("")
     const [job, setJob] = useState("")
+    const [errorMessage, setErrorMessage] = useState("")
 
+    const clearForm = () => {
+        setFullName("")
+        setEmail("")
+        setJob("")
+        setErrorMessage("")
+    }
+
+    const validateFields = () => {
+        return fullName.length > 0 && email.length > 0 && job.length > 0 
+    }
 
     const handleAddUser = async () => {
+        if (!validateFields()) {
+            setErrorMessage("All fields are mandatory!")
+            return
+        }
+
         const user = {
             fullName,
             email,
@@ -18,11 +34,13 @@ const Form = ({ updateListUsers }) => {
         await addUser(user)
         const users = await getUsers()
         updateListUsers(users)
+        clearForm()
     }
 
     return (
         <div>
             <h1>Add user:</h1>
+            <p className="ErrorMessage">{errorMessage}</p>
             <label for="fullName">Full name:</label>
             <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} id="fullName"></input>
             <br />

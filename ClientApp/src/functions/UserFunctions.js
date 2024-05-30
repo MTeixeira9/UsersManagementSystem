@@ -21,3 +21,15 @@ export const addUser = async (user) => {
     })
     return res.json()
 }
+
+export const deleteUser = async (userId) => {
+    const res = await fetch(`/api/Users/${userId}`, {
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Accept': '*/*',
+            'Content-Type': 'application/json'
+        },
+        method: "DELETE"
+    })
+    return res
+}

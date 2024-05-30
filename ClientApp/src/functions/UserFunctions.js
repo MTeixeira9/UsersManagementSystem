@@ -11,12 +11,13 @@ export const getUsers = async () => {
 
 export const addUser = async (user) => {
     const res = await fetch('/api/Users', {
-        body: user,
+        body: JSON.stringify(user),
         headers: {
-            'Access-Control-Allow-Origin': '*'
+            'Access-Control-Allow-Origin': '*',
+            'Accept': '*/*',
+            'Content-Type': 'application/json'
         },
-        method: "POST",
-        mode: 'no-cors'
+        method: "POST"
     })
     return res.json()
 }

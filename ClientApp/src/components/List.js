@@ -22,7 +22,7 @@ const List = ({ listUsers, updateListUsers }) => {
             <div className="ListArea">
                 <ul className="List">
                     {listUsers.map(({ fullName, email, job, id }) => {
-                        return <li className="ListUser"><User key={id} id={id} fullName={fullName} email={email} job={job} handleDeleteUser={handleDeleteUser} /></li>
+                        return <li key={id} className="ListUser"><User key={id} id={id} fullName={fullName} email={email} job={job} handleDeleteUser={handleDeleteUser} /></li>
                     })}
                 </ul>
             </div>

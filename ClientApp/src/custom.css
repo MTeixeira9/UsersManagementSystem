@@ -3,6 +3,19 @@ body {
   padding: 10px;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.App h1 {
+  display: flex;
+  justify-content: center;
+  color: #3f4481;
+}
+
 a {
   color: #0366d6;
 }
@@ -12,7 +25,9 @@ code {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  border: 1px solid rgb(55, 51, 51);
+  border-radius: 5px;
+  width: 100px;
+  color: white;
+  background-color: rgb(14, 126, 126);
 }

@@ -1,3 +1,24 @@
 .ErrorMessage {
     color: red;
 }
+
+.FormArea {
+    display: flex;
+    background-color: rgb(192, 214, 210);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+.FormArea h2 {
+    color: #546b52;
+}
+
+.RightForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}

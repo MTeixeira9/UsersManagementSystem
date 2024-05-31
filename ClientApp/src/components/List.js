@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./User";
+import "./List.css";
 import { deleteUser, getUsers } from "../functions/UserFunctions";
 
 const List = ({ listUsers, updateListUsers }) => {
@@ -12,12 +13,20 @@ const List = ({ listUsers, updateListUsers }) => {
 
     const render = () => {
         if (listUsers.length === 0) {
-            return <div>No users to show!</div>
+            return <div className="ErrorArea">
+                <h2>No users to show!</h2>
+            </div>
         }
 
-        return listUsers.map(({ fullName, email, job, id }) => {
-            return <User key={id} id={id} fullName={fullName} email={email} job={job} handleDeleteUser={handleDeleteUser} />
-        })
+        return (
+            <div className="ListArea">
+                <ul className="List">
+                    {listUsers.map(({ fullName, email, job, id }) => {
+                        return <li className="ListUser"><User key={id} id={id} fullName={fullName} email={email} job={job} handleDeleteUser={handleDeleteUser} /></li>
+                    })}
+                </ul>
+            </div>
+        )
     }
 
     return (

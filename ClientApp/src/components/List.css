@@ -1,0 +1,24 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ListUser {
+    margin-bottom: 20px;
+}
+
+.ListArea, .ErrorArea {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.ErrorArea h2 {
+    font-style: italic;
+    color: rgb(41, 89, 73);
+}

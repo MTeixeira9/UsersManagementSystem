@@ -16,7 +16,7 @@ const Form = ({ updateListUsers }) => {
     }
 
     const validateFields = () => {
-        return fullName.length > 0 && email.length > 0 && job.length > 0 
+        return fullName.length > 0 && email.length > 0 && job.length > 0
     }
 
     const handleAddUser = async () => {
@@ -38,19 +38,17 @@ const Form = ({ updateListUsers }) => {
     }
 
     return (
-        <div>
-            <h1>Add user:</h1>
-            <p className="ErrorMessage">{errorMessage}</p>
-            <label for="fullName">Full name:</label>
-            <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} id="fullName"></input>
-            <br />
-            <label for="email">Email:</label>
-            <input type="text" value={email} onChange={e => setEmail(e.target.value)} id="email"></input>
-            <br />
-            <label for="job">Job:</label>
-            <input type="text" value={job} onChange={e => setJob(e.target.value)} id="job"></input>
-            <br />
-            <button onClick={() => handleAddUser()}>Add</button>
+        <div className="FormArea">
+            <div className="LeftForm">
+                <h2>Create users</h2>
+                <p className="ErrorMessage">{errorMessage}</p>
+            </div>
+            <div className="RightForm">
+                <input placeholder="Full name" type="text" value={fullName} onChange={e => setFullName(e.target.value)} id="fullName" className="required" />
+                <input placeholder="Email" type="text" value={email} onChange={e => setEmail(e.target.value)} id="email" className="required" />
+                <input placeholder="Job" type="text" value={job} onChange={e => setJob(e.target.value)} id="job" className="required" />
+                <button onClick={() => handleAddUser()} className="btn-primary">Add</button>
+            </div>
         </div>
     )
 }

@@ -1,9 +1,8 @@
 .User {
     display: flex;
-    gap: 5px;
-}
-
-.delete {
-    cursor: pointer;
-    font-weight: 900;
+    flex-direction: column;
+    border: 1px solid rgb(1, 83, 83);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(240, 202, 156);
 }

@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
-using ChallengeVisionBox.Data;
-using ChallengeVisionBox.Models;
+using UsersManagementSystem.Data;
+using UsersManagementSystem.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

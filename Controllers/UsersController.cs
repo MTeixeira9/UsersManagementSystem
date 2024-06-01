@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ChallengeVisionBox.Data;
-using ChallengeVisionBox.Models;
+using UsersManagementSystem.Data;
+using UsersManagementSystem.Models;
 
-namespace ChallengeVisionBox.Controllers
+namespace UsersManagementSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

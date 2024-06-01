@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "ChallengeVisionBox": {
+    "UsersManagementSystem": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:7236;http://localhost:5277",

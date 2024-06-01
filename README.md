@@ -1,4 +1,4 @@
-# Challenge Vision-Box
+# UsersManagementSystem
 
 Users Management System (React and .NET application)
 
@@ -11,9 +11,9 @@ I've used Postgres as database management. So, these are the steps to configure 
 1. Start the server
 2. Double click on 'postgres' database and a terminal should pop up
 3. Use the following script commands to create a new database:
-3.1. `CREATE DATABASE challengevisionbox;`
+3.1. `CREATE DATABASE usersmanagementsystem;`
 3.2. `CREATE USER test with ENCRYPTED PASSWORD 'test';`
-3.3. `GRANT ALL PRIVILEGES ON DATABASE challengevisionbox TO test;`
+3.3. `GRANT ALL PRIVILEGES ON DATABASE usersmanagementsystem TO test;`
 3.4. `GRANT ALL ON SCHEMA public TO test;`
 4. Close the terminal
 5. Now you should have a new database on your Postgre

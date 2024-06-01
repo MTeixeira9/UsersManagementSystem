@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ChallengeVisionBox.Controllers;
+namespace UsersManagementSystem.Controllers;
 
 [Authorize]
 [ApiController]

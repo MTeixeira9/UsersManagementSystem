@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Duende.IdentityServer.EntityFramework.Options;
-using ChallengeVisionBox.Models;
+using UsersManagementSystem.Models;
 
-namespace ChallengeVisionBox.Data;
+namespace UsersManagementSystem.Data;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
 {

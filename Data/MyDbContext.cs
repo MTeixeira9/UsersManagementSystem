@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ChallengeVisionBox.Models;
+using UsersManagementSystem.Models;
 
-namespace ChallengeVisionBox.Data;
+namespace UsersManagementSystem.Data;
 
 public class MyDbContext : DbContext
 {

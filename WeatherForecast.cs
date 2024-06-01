@@ -1,4 +1,4 @@
-namespace ChallengeVisionBox;
+namespace UsersManagementSystem;
 
 public class WeatherForecast
 {

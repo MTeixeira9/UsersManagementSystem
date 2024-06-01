@@ -14,11 +14,11 @@ I've used Postgres as database management. So, these are the steps to configure 
 
 3. Use the following script commands to create a new database:
 
-  3.1. `CREATE DATABASE usersmanagementsystem;`
+  3.1. `CREATE DATABASE challengevisionbox;`
 
   3.2. `CREATE USER test with ENCRYPTED PASSWORD 'test';`
 
-  3.3. `GRANT ALL PRIVILEGES ON DATABASE usersmanagementsystem TO test;`
+  3.3. `GRANT ALL PRIVILEGES ON DATABASE challengevisionbox TO test;`
 
   3.4. `GRANT ALL ON SCHEMA public TO test;`
 
@@ -26,7 +26,7 @@ I've used Postgres as database management. So, these are the steps to configure 
 
 5. Now you should have a new database on your Postgre
 
-![db_postgres](db.png)
+![db_Postgres](db.png)
 
 6. Make sure the PORT used on `ConnectionStrings.DefaultConnection` inside `appsettings.Development.json` is the same as the one on your Postgre app (by default is 5432)
 

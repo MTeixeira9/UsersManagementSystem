@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './custom.css';
 import List from './components/List';
 import { getUsers } from './functions/UserFunctions';
